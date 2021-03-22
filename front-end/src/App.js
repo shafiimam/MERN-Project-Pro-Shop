@@ -1,18 +1,31 @@
 import Footer from "./Components/Footer/Footer";
+import { BrowserRouter as Router, Route, Switch}  from "react-router-dom";
 import Header from "./Components/Header/Header";
-import { Container } from "react-bootstrap";
 import HomeScreen from "./Screens/HomeScreen";
+import ProductScreen from "./Screens/ProductScreen";
+import Contact from "./Components/Contact";
+import { Container } from "react-bootstrap";
 const App = () => {
   return (
-    <>
-      <Header></Header>
-      <main>
+    <div>
+      <Router>
+        <Header></Header>
         <Container>
-          <HomeScreen></HomeScreen>
+        <Switch>
+          <Route  path="/" exact>
+            <HomeScreen></HomeScreen>
+          </Route>
+          <Route path="/productDetail/:id">
+            <ProductScreen></ProductScreen>
+          </Route>
+          <Route path="/contact">
+            <Contact></Contact>
+          </Route>
+        </Switch>
         </Container>
-      </main>
+      </Router>
       <Footer></Footer>
-    </>
+    </div>
   );
 };
 

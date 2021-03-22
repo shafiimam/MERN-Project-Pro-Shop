@@ -2,9 +2,10 @@ import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import products from '../products';
 import Product from '../Components/Product/Product';
+import { Container } from 'react-bootstrap';
 const HomeScreen = () => {
     return (
-        <>
+        <div>
          <h1>Latest Products</h1>
          <Row>
              {
@@ -15,7 +16,7 @@ const HomeScreen = () => {
                  ))
              }
         </Row>   
-        </>
+        </div>
     );
 };
 
