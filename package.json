@@ -1,0 +1,19 @@
+{
+  "name": "proshop",
+  "version": "1.0.0",
+  "description": "mern shopping app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shafiimam/MERN-Project-Pro-Shop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shafiimam/MERN-Project-Pro-Shop/issues"
+  },
+  "homepage": "https://github.com/shafiimam/MERN-Project-Pro-Shop#readme"
+}
