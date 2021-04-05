@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/shafiimam/MERN-Project-Pro-Shop/issues"
   },
-  "homepage": "https://github.com/shafiimam/MERN-Project-Pro-Shop#readme"
+  "homepage": "https://github.com/shafiimam/MERN-Project-Pro-Shop#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
