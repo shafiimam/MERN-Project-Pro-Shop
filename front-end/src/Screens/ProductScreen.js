@@ -1,6 +1,5 @@
-import { Button } from 'bootstrap';
 import React, { useEffect, useState } from 'react';
-import { Container, Row, Col, ListGroup, Card, Image} from 'react-bootstrap';
+import { Row, Col, ListGroup, Card, Image} from 'react-bootstrap';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import axios from 'axios'
@@ -13,7 +12,7 @@ const ProductScreen = () => {
 
    useEffect(() =>{
     const fetchProduct = async()=>{
-        const {data} = await axios.get('http://localhost:5000/api/product/'+id)
+        const {data} = await axios.get('/api/products/'+id)
         setProduct(data)
     }
     fetchProduct();

@@ -9,7 +9,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon back-end/server.js",
     "client": "npm start --prefix front-end",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node back-end/seeder",
+    "data:destroy": "node back-end/seeder -d"
   },
   "repository": {
     "type": "git",
@@ -22,11 +24,13 @@
   },
   "homepage": "https://github.com/shafiimam/MERN-Project-Pro-Shop#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "colors": "^1.4.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
     "mongoose": "^5.12.3"
   },
   "devDependencies": {

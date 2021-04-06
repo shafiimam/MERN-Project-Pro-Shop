@@ -1,4 +1,4 @@
-import pkg, { modelNames } from 'mongoose'
+import pkg from 'mongoose'
 
 const mongoose = pkg;
 

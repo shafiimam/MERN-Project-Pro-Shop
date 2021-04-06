@@ -1,6 +1,4 @@
-import pkg, {
-    modelNames
-} from "mongoose";
+import pkg from "mongoose";
 
 const mongoose = pkg;
 
@@ -44,7 +42,7 @@ const productSchema = mongoose.Schema({
         required: true,
     },
     description: {
-        type: Number,
+        type: String,
         required: true,
     },
     reviews: [reviewSchema],

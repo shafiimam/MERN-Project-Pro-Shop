@@ -1,5 +1,6 @@
 import  pkg  from "mongoose";
-
+import dotenv from 'dotenv'
+dotenv.config()
 const mongoose = pkg;
 
 const connectDB = async () => {
