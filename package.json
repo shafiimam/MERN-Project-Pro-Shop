@@ -25,7 +25,16 @@
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
+<<<<<<< HEAD
     "express": "^4.17.1"
+=======
+<<<<<<< HEAD
+    "express": "^4.17.1",
+    "mongoose": "^5.12.3"
+=======
+    "express": "^4.17.1"
+>>>>>>> e5664caeca8bbf05cae9f7417b6953ca6aeaf2e3
+>>>>>>> 14772565f698d2fc0bddc6deccfad8ee58fe8aa6
   },
   "devDependencies": {
     "concurrently": "^6.0.0",
