@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import express from 'express'; 
 import products from './Data/products.js'; 
 import dotenv from 'dotenv'
@@ -9,16 +8,6 @@ const app = express()
 app.use(cors())
 
 connectDB();
-=======
-const express = require('express') 
-const products = require('./Data/products') 
-require('dotenv').config();
-const cors = require('cors')
-const app = express()
-app.use(cors())
-
-
->>>>>>> e5664caeca8bbf05cae9f7417b6953ca6aeaf2e3
 
 app.get('/', (req, res)=>{
     res.send('api is running');
@@ -34,8 +23,4 @@ app.get('/api/product/:id', (req, res)=>{
 })
 
 
-<<<<<<< HEAD
 app.listen(5000 || process.env.PORT ,console.log(`server running ${process.env.NODE_ENV} mode  on ${process.env.PORT}`))
-=======
-app.listen(000 || process.env.PORT ,console.log(`server running ${process.env.NODE_ENV} mode  on ${process.env.PORT}`))
->>>>>>> e5664caeca8bbf05cae9f7417b6953ca6aeaf2e3
