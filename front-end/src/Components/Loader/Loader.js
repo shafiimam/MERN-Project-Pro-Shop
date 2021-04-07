@@ -7,7 +7,7 @@ const Loader = () => {
         margin: 'auto',
         display:'block'
         }}>
-            <spna className='sr-only'>Loading</spna>
+            <span className='sr-only'>Loading</span>
         </Spinner>
     );
 };
