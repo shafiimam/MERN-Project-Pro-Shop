@@ -5,6 +5,7 @@ import HomeScreen from "./Screens/HomeScreen";
 import ProductScreen from "./Screens/ProductScreen";
 import Contact from "./Components/Contact";
 import { Container } from "react-bootstrap";
+import CartScreen from "./Screens/CartScreen";
 const App = () => {
   return (
     <div>
@@ -21,10 +22,14 @@ const App = () => {
           <Route path="/contact">
             <Contact></Contact>
           </Route>
+          <Route path='/cart/:id?'>
+            <CartScreen></CartScreen>
+          </Route>
         </Switch>
         </Container>
+        <Footer></Footer>
       </Router>
-      <Footer></Footer>
+      
     </div>
   );
 };

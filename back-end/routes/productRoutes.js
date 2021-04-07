@@ -8,7 +8,7 @@ import Product from '../models/productModel.js'
 // @access public
 router.get('/',asyncHandler(async (req, res)=>{
     const products = await Product.find({})
-    res.send(products);
+    res.json(products);
 }) )
 
 
