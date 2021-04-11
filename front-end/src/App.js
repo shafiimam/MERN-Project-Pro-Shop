@@ -6,6 +6,12 @@ import ProductScreen from "./Screens/ProductScreen";
 import Contact from "./Components/Contact";
 import { Container } from "react-bootstrap";
 import CartScreen from "./Screens/CartScreen";
+import LoginScreen from "./Screens/LoginScreen";
+import RegisterScreen from "./Screens/RegisterScreen";
+import ProfileScreen from "./Screens/ProfileScreen";
+import ShippingScreen from "./Screens/ShippingScreen";
+import PaymentScreen from "./Screens/PaymentScreen";
+import PlaceOrderScreen from "./Screens/PlaceOrderScreen";
 const App = () => {
   return (
     <div>
@@ -24,6 +30,24 @@ const App = () => {
           </Route>
           <Route path='/cart/:id?'>
             <CartScreen></CartScreen>
+          </Route>
+          <Route path='/shipping'>
+            <ShippingScreen></ShippingScreen>
+          </Route>
+          <Route path='/payment'>
+           <PaymentScreen></PaymentScreen>
+          </Route>
+          <Route path='/placeorder'>
+            <PlaceOrderScreen></PlaceOrderScreen>
+          </Route>
+          <Route path='/login'>
+            <LoginScreen></LoginScreen>
+          </Route>
+          <Route path='/register'>
+            <RegisterScreen></RegisterScreen>
+          </Route>
+          <Route path='/profile'>
+            <ProfileScreen></ProfileScreen>
           </Route>
         </Switch>
         </Container>
