@@ -13,6 +13,7 @@ import ShippingScreen from "./Screens/ShippingScreen";
 import PaymentScreen from "./Screens/PaymentScreen";
 import PlaceOrderScreen from "./Screens/PlaceOrderScreen";
 import OrderScreen from "./Screens/OrderScreen";
+import UserListScreen from "./Screens/UserListScreen";
 const App = () => {
   return (
     <div>
@@ -52,6 +53,9 @@ const App = () => {
           </Route>
           <Route path='/profile'>
             <ProfileScreen></ProfileScreen>
+          </Route>
+          <Route path='/admin/userList'>
+            <UserListScreen></UserListScreen>
           </Route>
         </Switch>
         </Container>
