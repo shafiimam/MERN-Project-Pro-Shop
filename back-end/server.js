@@ -52,4 +52,4 @@ app.use(errorHandler)
 
 
 
-app.listen(5000 || process.env.PORT ,console.log(`server running ${process.env.NODE_ENV} mode  on ${process.env.PORT}`.yellow.bold))
+app.listen( process.env.PORT || 5000 ,console.log(`server running ${process.env.NODE_ENV} mode  on ${process.env.PORT}`.yellow.bold))
