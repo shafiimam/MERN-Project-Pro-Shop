@@ -14,6 +14,10 @@ import PaymentScreen from "./Screens/PaymentScreen";
 import PlaceOrderScreen from "./Screens/PlaceOrderScreen";
 import OrderScreen from "./Screens/OrderScreen";
 import UserListScreen from "./Screens/UserListScreen";
+import UserEditScreen from "./Screens/UserEditScreen";
+import ProductListScreen from "./Screens/ProductListScreen";
+import ProductEditScreen from "./Screens/ProductEditScreen";
+import OrderListScreen from "./Screens/OrderListScreen";
 const App = () => {
   return (
     <div>
@@ -22,6 +26,9 @@ const App = () => {
         <Container>
         <Switch>
           <Route  path="/" exact>
+            <HomeScreen></HomeScreen>
+          </Route>
+          <Route  path="/search/:keyword">
             <HomeScreen></HomeScreen>
           </Route>
           <Route path="/productDetail/:id">
@@ -56,6 +63,18 @@ const App = () => {
           </Route>
           <Route path='/admin/userList'>
             <UserListScreen></UserListScreen>
+          </Route>
+          <Route path='/admin/orderList'>
+            <OrderListScreen></OrderListScreen>
+          </Route>
+          <Route path='/admin/productlist'>
+            <ProductListScreen></ProductListScreen>
+          </Route>
+          <Route path='/admin/product/:id/edit'>
+            <ProductEditScreen></ProductEditScreen>
+          </Route>
+          <Route path='/admin/user/:id/edit'>
+            <UserEditScreen></UserEditScreen>
           </Route>
         </Switch>
         </Container>

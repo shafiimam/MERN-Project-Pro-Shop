@@ -6,17 +6,19 @@ import { listProducts }  from '../actions/productActions'
 import { productListReducer } from "../reducer/productReducers";
 import Loader from "../Components/Loader/Loader";
 import Message from "../Components/Message/Message";
+import { useParams } from "react-router";
 
 const HomeScreen = () => {
+const {keyword} = useParams()
 const dispatch = useDispatch()
-
+console.log(keyword)
 const productList = useSelector(state=> state.productList)
 
 const {loading,products,error} = productList
 
 useEffect(() =>{
-   dispatch(listProducts())
-},[dispatch])
+   dispatch(listProducts(keyword))
+},[dispatch, keyword])
 
   return (
     <div>
