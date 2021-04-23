@@ -3,18 +3,18 @@ import {CART_ADD_ITEM , CART_REMOVE_ITEM, CART_SAVE_PAYMENT_METHOD, CART_SAVE_SH
 export const cartReducer = (state= {cartItems: [], shippingAddress : {} }, action)=>{
     switch (action.type){
         case CART_ADD_ITEM:
-            const item = action.payload
-            const existItem = state.cartItems.find(x=> x.product === item.product) 
+            const items = action.payload
+            const existItem = state.cartItems.find(x=> x.product === items.product) 
             if(existItem){
                 return {
                     ...state,
-                    cartItems: state.cartItems.map(x=> x.product === existItem.product ? item: x)
+                    cartItems: state.cartItems.map(x=> x.product === existItem.product ? items: x)
                 }
             }
             else{
                 return {
                     ...state,
-                    cartItems: [...state.cartItems, item]
+                    cartItems: [...state.cartItems, items]
                 }
             }
             case CART_REMOVE_ITEM:

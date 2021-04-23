@@ -12,7 +12,7 @@ const storage = multer.diskStorage({
       null,
       `${file.fieldname}-${Date.now()}${path.extname(file.originalname)}`
     )
-  },
+  }
 })
 
 function checkFileType(file, cb) {

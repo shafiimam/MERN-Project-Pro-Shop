@@ -1,12 +1,11 @@
 import React from "react";
-import {Route, useHistory} from 'react-router-dom';
+import {Route} from 'react-router-dom';
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import { useDispatch, useSelector } from 'react-redux'
 import { logout } from '../../actions/userActions'
 import SearchBox from '../SearchBox/SearchBox'
 const Header = () => {
-  const history = useHistory()
   const dispatch = useDispatch()
   const userLogin = useSelector(state => state.userLogin)
   const { userInfo } = userLogin

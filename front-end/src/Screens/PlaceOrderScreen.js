@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Button, Row, Col, ListGroup, Image, Card } from "react-bootstrap";
-import { useDispatch, userDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router";
 import Message from '../Components/Message/Message'
 import CheckOutSteps from '../Components/CheckOutSteps/CheckOutSteps'
@@ -56,7 +56,7 @@ const PlaceOrderScreen = () => {
                             </p>
                         </ListGroup.Item>
                         <ListGroup.Item>
-                            <h2>Paymenth Method</h2>
+                            <h2>Payment Method</h2>
                             <strong>
                                 method:
                             </strong>

@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { Redirect } from "react-router-dom";
 import { LinkContainer } from "react-router-bootstrap";
 import { Table, Button, Row, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
@@ -19,7 +18,6 @@ const ProductListScreen = () => {
   const history = useHistory();
   const productList = useSelector((state) => state.productList);
   const { loading, error, products, pages, page } = productList;
-    console.log(pageNumber)
   const productDelete = useSelector((state) => state.productDelete);
   const {
     loading: loadingDelete,

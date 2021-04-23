@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Link, useLocation, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { Form, Button, Row, Col, Table } from "react-bootstrap";
 import {LinkContainer} from 'react-router-bootstrap'
-import { useDispatch, userDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Message from "../Components/Message/Message";
 import Loader from "../Components/Loader/Loader";
 import { getUserDetails , updateUserProfile} from "../actions/userActions";
@@ -13,7 +13,6 @@ const ProfileScreen = () => {
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const [message, setMessage] = useState(null);
-    const location = useLocation();
     const dispatch = useDispatch();
     const history = useHistory()
 
@@ -47,7 +46,7 @@ const ProfileScreen = () => {
     const submitHandler = (e) => {
         e.preventDefault();
         if (password !== confirmPassword) {
-            setMessage('password dont match')
+            setMessage('password did not match')
         }
         else {
            dispatch(updateUserProfile({id: user._id, name , email, password}))

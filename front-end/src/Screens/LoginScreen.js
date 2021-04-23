@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation, useHistory } from "react-router-dom";
 import { Form, Button, Row, Col } from "react-bootstrap";
-import { useDispatch, userDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Message from "../Components/Message/Message";
 import Loader from "../Components/Loader/Loader";
 import FormContainer from "../Components/FormContainer/FormContainer";
@@ -24,8 +24,6 @@ const LoginScreen = () => {
   }, [history,userInfo, redirect]);
   const submitHandler = (e) => {
     e.preventDefault();
-
-    //disptach login
     dispatch(login(email, password));
   };
 

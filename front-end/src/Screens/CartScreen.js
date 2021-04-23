@@ -21,7 +21,6 @@ const CartScreen = () => {
     useEffect(()=>{
         if(id){
             dispatch(addToCart(id,qty))
-           console.log('qty is',qty)
         }
     },[dispatch, id, qty])
 
