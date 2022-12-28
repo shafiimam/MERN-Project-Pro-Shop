@@ -5,7 +5,7 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "node back-end/server.js",
+    "start": "node back-end/server.js npm install --prefix front-end && npm run build --prefix front-end",
     "server": "nodemon back-end/server.js",
     "client": "npm start --prefix front-end",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
