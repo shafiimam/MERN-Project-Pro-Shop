@@ -5,13 +5,14 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "node back-end/server.js && npm install --prefix front-end && npm run build --prefix front-end",
+    "start": "node back-end/server.js",
     "server": "nodemon back-end/server.js",
     "client": "npm start --prefix front-end",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "data:import": "node back-end/seeder.js",
     "data:destroy": "node back-end/seeder -d",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix front-end && npm run build --prefix front-end"
+    "heroku-postbuild": "npm install --prefix front-end && npm run build --prefix front-end",
+    "build": "npm run build --prefix front-end"
   },
   "repository": {
     "type": "git",
